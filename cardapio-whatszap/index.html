@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<title>Cardápio Digital</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Cardápio da Lanchonete</h1>
+
+<input type="text" id="nomeCliente" placeholder="Digite seu nome">
+
+<div id="admin-area" style="display:none;">
+
+<h2>Adicionar Produto (Administrador)</h2>
+
+<div class="admin">
+
+<input type="text" id="novoNome" placeholder="Nome do produto">
+
+<input type="number" id="novoPreco" placeholder="Preço">
+
+<input type="text" id="novaImagem" placeholder="URL da imagem">
+
+<button onclick="criarProduto()">Cadastrar Produto</button>
+
+</div>
+</div>
+<button onclick="entrarAdmin()">Modo administrador</button>
+
+<h2>Produtos</h2>
+
+<div id="produtos" class="produtos"></div>
+
+
+<h2>🍔 Hambúrgueres</h2>
+
+<div class="produtos">
+
+<div class="produto">
+<img src="img/xBacon.png">
+<h3>X-Bacon</h3>
+<p>R$ 28,00</p>
+<button onclick="adicionarProduto('X-Bacon',28)">Adicionar</button>
+</div>
+
+<div class="produto">
+<img src="img/bacon-egg.png">
+<h3>Bacon Egg</h3>
+<p>R$ 23,00</p>
+<button onclick="adicionarProduto('Bacon Egg',23)">Adicionar</button>
+</div>
+
+<div class="produto">
+<img src="img/monstruoso-vegan.png">
+<h3>Monstruoso Vegan</h3>
+<p>R$ 26,00</p>
+<button onclick="adicionarProduto('Monstruoso Vegan',26)">Adicionar</button>
+</div>
+
+<div class="produto">
+<img src="img/monstruoso.png">
+<h3>Monstruoso</h3>
+<p>R$ 28,00</p>
+<button onclick="adicionarProduto('Monstruoso',28)">Adicionar</button>
+</div>
+
+<div class="produto">
+<img src="img/xsalada.jpeg">
+<h3>X-Salada</h3>
+<p>R$ 27,00</p>
+<button onclick="adicionarProduto('X-Salada',27)">Adicionar</button>
+</div>
+
+<div class="produto">
+<img src="img/xvegan.png">
+<h3>X-Vegan</h3>
+<p>R$ 27,00</p>
+<button onclick="adicionarProduto('X-Vegan',27)">Adicionar</button>
+</div>
+
+</div>
+
+<h2>🛒 Carrinho</h2>
+
+<ul id="lista-carrinho"></ul>
+
+<p>Total: <span id="total">R$ 0</span></p>
+
+<button onclick="limparCarrinho()">Limpar carrinho</button>
+
+<div class="carrinho-fixo">
+
+<span id="contador-itens">0 itens</span>
+<span id="total-fixo">R$ 0</span>
+
+<button onclick="finalizarPedido()">Finalizar Pedido</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
