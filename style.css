@@ -1,6 +1,6 @@
 body{
 font-family: Arial;
-background-color: rgb(90, 56, 15);
+background-color:#53756e; 
 text-align:center;
 margin:0;
 }
@@ -27,7 +27,7 @@ padding:8px;
 
 
 h1{
-color:#c5a1a1;
+color:#1d0c0c;
 }
 
 input{
